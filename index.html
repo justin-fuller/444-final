@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      iframe {
+        box-shadow: 5px 5px 5px #888;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #3b1183;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .navbar li {
+        float: left;
+        border-right: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+        font-family: Arial;
+      }
+
+      .navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      .navbar li a:hover {
+        background-color: white;
+        color: #3b1183;
+      }
+      .navbar .active {
+        background-color: #04aa6d;
+      }
+
+      .bodyInformation {
+        padding-left: 5px;
+        padding-bottom: 10px;
+        margin-top: 50px;
+        background-color: #a19fa39d;
+        font-family: Arial;
+      }
+    </style>
     <title>Home</title>
-</head>
-<body>
-    <h1>Home</h1>
-    <p>Hello!</p>
-</body>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </div>
+    <div class="bodyInformation">
+      <h1>Home</h1>
+
+      <p>Hello!</p>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5735.3746019756!2d-91.64493078649704!3d44.048514485253705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f96d077a93889b%3A0x8665caea19003ab7!2sWinona%20State%20University!5e0!3m2!1sen!2sus!4v1675199705438!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </body>
 </html>
