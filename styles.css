@@ -1,0 +1,57 @@
+iframe {
+  box-shadow: 5px 5px 5px #888;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3b1183;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar li {
+  float: left;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  font-family: Arial;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  /* background-color: white;
+  color: #3b1183; */
+  text-decoration: underline;
+}
+.navbar .active {
+  background-color: #04aa6d;
+}
+
+.bodyInformation {
+  padding-left: 5px;
+  padding-bottom: 10px;
+  margin: auto;
+  margin-top: 50px;
+  /* background-color: #a19fa3; */
+  background-color: white;
+  font-family: Arial;
+  border: 1px solid;
+  width: 93%;
+  padding: 10px;
+}
+
+body {
+  background-color: rgb(169, 169, 169);
+}
