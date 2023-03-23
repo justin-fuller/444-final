@@ -98,7 +98,7 @@ iframe {
   background-color: white;
   font-family: Arial;
   border: 1px solid;
-  width: 93%;
+  width: 97%;
   padding: 10px;
 }
 
@@ -116,6 +116,6 @@ body {
   }
 
   .bodyInformation {
-    width: 100%;
+    width: 99%;
   }
 }
