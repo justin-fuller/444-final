@@ -106,16 +106,55 @@ body {
   background-color: rgb(169, 169, 169);
 }
 
+.one {
+  width: 30px;
+}
+.two {
+  width: 20px;
+}
+.three {
+  width: 25px;
+}
+
+.nav:hover div {
+  width: 30px;
+}
+
+.navbar div {
+  /* height: 4px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 25px;
+  transition: 0.3s; */
+  display: none;
+}
+
+.navbar:hover div {
+  width: 30px;
+  cursor: pointer;
+}
+
 /* Adding Responsiveness */
 @media screen and (max-width: 500px) {
   .navbar a {
-    float: none;
+    /* float: none;
     display: block;
     width: 100%;
-    text-align: center;
+    text-align: center; */
+    display: none;
   }
 
   .bodyInformation {
     width: 99%;
+  }
+
+  .navbar div {
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.3s;
+    margin-left: 3px;
+    display: flex;
   }
 }
