@@ -67,12 +67,11 @@ iframe {
 
 .bodyInformation {
   padding: 5px;
-  margin: auto;
-  margin-top: 2px;
+  margin-top: 0px;
   background-color: white;
   font-family: Arial;
   border: 1px solid;
-  width: 97%;
+  width: 100%;
   padding: 10px;
 }
 
@@ -80,37 +79,12 @@ body {
   background-color: rgb(169, 169, 169);
 }
 
-/* .navbar {
-  width: 100%;
-  background-color: var(--purple-dark);
-  overflow: auto;
-}
-
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  width: 25%;
-  text-align: center;
-  font-family: "poppins", sans-serif;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-} */
-
-/* .navbar a.active {
-  background-color: #04aa6d;
-} */
-
 /* header */
 
 .header {
   background-color: var(--purple);
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   z-index: 3;
 }
@@ -144,6 +118,13 @@ body {
   padding: 10px 20px;
   text-decoration: none;
 } */
+
+.winonaHeaderLogo {
+  /* float: left; */
+  padding: 3px;
+  text-decoration: none;
+  margin-left: 0;
+}
 
 /* menu */
 
