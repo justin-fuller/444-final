@@ -54,14 +54,10 @@ p {
   color: var(--black);
   line-height: 1.5;
 }
-
-iframe {
-  box-shadow: 5px 5px 5px #888;
-}
+/* End of Global CSS Variables */
 
 /* Navigation Bar CSS */
 * {
-  /* box-sizing: border-box; */
   margin: 0;
 }
 
@@ -80,11 +76,10 @@ body {
 }
 
 /* header */
-
 .header {
   background-color: var(--purple);
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  /* position: fixed; */
+  /* Shadow to navbar is not working */
+  /* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); */
   width: 100%;
   z-index: 3;
 }
@@ -108,26 +103,18 @@ body {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: var(--purple-dark);
+  /* Winona only has an underline for hover */
+  /* background-color: var(--purple-dark); */
+  text-decoration: underline;
 }
 
-/* .header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-} */
-
 .winonaHeaderLogo {
-  /* float: left; */
   padding: 3px;
   text-decoration: none;
   margin-left: 0;
 }
 
 /* menu */
-
 .header .menu {
   clear: both;
   max-height: 0;
@@ -135,7 +122,6 @@ body {
 }
 
 /* menu icon */
-
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -174,7 +160,6 @@ body {
 }
 
 /* menu btn */
-
 .header .menu-btn {
   display: none;
 }
@@ -201,7 +186,6 @@ body {
 }
 
 /* 48em = 768px */
-
 @media (min-width: 48em) {
   .header li {
     float: left;
