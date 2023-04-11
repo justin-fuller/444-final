@@ -61,44 +61,17 @@ iframe {
 
 /* Navigation Bar CSS */
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0;
 }
-.navbar {
-  width: 100%;
-  background-color: var(--purple);
-  overflow: auto;
-}
-
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  width: 25%; /* Four links of equal widths */
-  text-align: center;
-  font-family: "poppins", sans-serif;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* .navbar a.active {
-  background-color: #04aa6d;
-} */
-
-/* End of Navigation Bar CSS */
 
 .bodyInformation {
   padding: 5px;
-  margin: auto;
-  margin-top: 2px;
+  margin-top: 0px;
   background-color: white;
   font-family: Arial;
   border: 1px solid;
-  width: 97%;
+  width: 100%;
   padding: 10px;
 }
 
@@ -106,16 +79,142 @@ body {
   background-color: rgb(169, 169, 169);
 }
 
-/* Adding Responsiveness */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
+/* header */
 
-  .bodyInformation {
-    width: 99%;
+.header {
+  background-color: var(--purple);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  /* position: fixed; */
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: var(--purple);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  /* border-right: 1px solid #f4f4f4; */
+  text-decoration: none;
+  color: white;
+  font-family: "poppins", sans-serif;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: var(--purple-dark);
+}
+
+/* .header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+} */
+
+.winonaHeaderLogo {
+  /* float: left; */
+  padding: 3px;
+  text-decoration: none;
+  margin-left: 0;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 25px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
   }
 }
