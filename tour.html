@@ -7,7 +7,78 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <!-- Importing Poppins Font -->
     <link rel="stylesheet" href="https://use.typekit.net/uck5riv.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Take A Tour!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #e3f2fd;
+      }
+      .select-menu {
+        width: 380px;
+        margin: 140px auto;
+      }
+      .select-menu .select-btn {
+        display: flex;
+        height: 55px;
+        background: #fff;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        border-radius: 8px;
+        align-items: center;
+        cursor: pointer;
+        justify-content: space-between;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .select-btn i {
+        font-size: 25px;
+        transition: 0.3s;
+      }
+      .select-menu.active .select-btn i {
+        transform: rotate(-180deg);
+      }
+      .select-menu .options {
+        position: relative;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+      .select-menu.active .options {
+        display: block;
+      }
+      .options .option {
+        display: flex;
+        height: 55px;
+        cursor: pointer;
+        padding: 0 16px;
+        border-radius: 8px;
+        align-items: center;
+        background: #fff;
+      }
+      .options .option:hover {
+        background: #f2f2f2;
+      }
+      .option i {
+        font-size: 25px;
+        margin-right: 12px;
+      }
+      .option .option-text {
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -21,22 +92,59 @@
       ></label>
       <ul class="menu">
         <li><a href="tour.html">Take a Tour!</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#careers">Careers</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="treeFinder.html">Tree Finder</a></li>
       </ul>
     </header>
     <!-- End of Navbar -->
 
     <!-- BodyInformation -->
-    <div class="bodyInformation">
+    <!-- <div class="bodyInformation">
       <h1>Welcome to the Tour Page!</h1>
       <h3>Choose a tour:</h3>
-      <!-- Test Button from Lab -->
-      <!-- <button onClick="loadXMLDoc()">asdf</button>
-      <p id="newHTML"></p> -->
-    </div>
+      <label for="tour-names">Choose a tour:</label>
+      <select name="tour-names" id="tour-names">
+        <option value="tour1">Tour 1</option>
+        <option value="tour2">Dave</option>
+        <option value="tour3">Pumpernickel</option>
+        <option value="tour4">Reeses</option>
+      </select>
+      <button onClick="loadXMLDoc()">asdf</button>
+      <p id="newHTML"></p>
+    </div> -->
     <!-- End of BodyInformation -->
-    <script src="treeInformation.js"></script>
+
+    <div class="select-menu">
+      <div class="select-btn">
+        <span class="sBtn-text">Select your Tour</span>
+        <i class="bx bx-chevron-down"></i>
+      </div>
+
+      <ul class="options">
+        <li class="option">
+          <!-- <i class="bx bxs-tree'" style="color: #171515"></i> -->
+          <i class="bx bxs-tree" style="color: #178e1d"></i>
+          <!-- <i class='bx bxs-tree bx-flip-horizontal' undefined ></i> -->
+          <span class="option-text">Tour 1</span>
+        </li>
+        <li class="option">
+          <i class="bx bxl-instagram-alt" style="color: #e1306c"></i>
+          <span class="option-text">Tour 2</span>
+        </li>
+        <li class="option">
+          <i class="bx bxl-linkedin-square" style="color: #0e76a8"></i>
+          <span class="option-text">Tour 3</span>
+        </li>
+        <li class="option">
+          <i class="bx bxl-facebook-circle" style="color: #4267b2"></i>
+          <span class="option-text">Tour 4</span>
+        </li>
+        <li class="option">
+          <i class="bx bxl-twitter" style="color: #1da1f2"></i>
+          <span class="option-text">Tour 5</span>
+        </li>
+      </ul>
+    </div>
+
+    <script src="tourMenu.js"></script>
   </body>
 </html>
