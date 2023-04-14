@@ -19,17 +19,18 @@
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
       }
-      body {
+      /* body {
         background: #e3f2fd;
-      }
+      } */
       .select-menu {
-        width: 380px;
-        margin: 140px auto;
+        width: 250px;
+        margin: 5px;
       }
       .select-menu .select-btn {
         display: flex;
         height: 55px;
-        background: #fff;
+        /* background: #fff; */
+        background: rgb(228, 228, 228);
         padding: 20px;
         font-size: 18px;
         font-weight: 400;
@@ -38,6 +39,7 @@
         cursor: pointer;
         justify-content: space-between;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border: 1px solid black;
       }
       .select-btn i {
         font-size: 25px;
@@ -98,52 +100,44 @@
     <!-- End of Navbar -->
 
     <!-- BodyInformation -->
-    <!-- <div class="bodyInformation">
+    <div class="bodyInformation">
       <h1>Welcome to the Tour Page!</h1>
       <h3>Choose a tour:</h3>
-      <label for="tour-names">Choose a tour:</label>
-      <select name="tour-names" id="tour-names">
-        <option value="tour1">Tour 1</option>
-        <option value="tour2">Dave</option>
-        <option value="tour3">Pumpernickel</option>
-        <option value="tour4">Reeses</option>
-      </select>
-      <button onClick="loadXMLDoc()">asdf</button>
-      <p id="newHTML"></p>
-    </div> -->
-    <!-- End of BodyInformation -->
+      <!-- <button onClick="loadXMLDoc()">asdf</button>
+      <p id="newHTML"></p> -->
+      <div class="select-menu">
+        <div class="select-btn">
+          <span class="sBtn-text">Select your Tour</span>
+          <i class="bx bx-chevron-down"></i>
+        </div>
 
-    <div class="select-menu">
-      <div class="select-btn">
-        <span class="sBtn-text">Select your Tour</span>
-        <i class="bx bx-chevron-down"></i>
+        <ul class="options">
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #178e1d"></i>
+
+            <span class="option-text">Tour 1</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #3c0680"></i>
+            <span class="option-text">Tour 2</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #4b08a1"></i>
+            <span class="option-text">Tour 3</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: black"></i>
+            <span class="option-text">Tour 4</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: brown"></i>
+            <span class="option-text">Tour 5</span>
+          </li>
+        </ul>
       </div>
-
-      <ul class="options">
-        <li class="option">
-          <!-- <i class="bx bxs-tree'" style="color: #171515"></i> -->
-          <i class="bx bxs-tree" style="color: #178e1d"></i>
-          <!-- <i class='bx bxs-tree bx-flip-horizontal' undefined ></i> -->
-          <span class="option-text">Tour 1</span>
-        </li>
-        <li class="option">
-          <i class="bx bxl-instagram-alt" style="color: #e1306c"></i>
-          <span class="option-text">Tour 2</span>
-        </li>
-        <li class="option">
-          <i class="bx bxl-linkedin-square" style="color: #0e76a8"></i>
-          <span class="option-text">Tour 3</span>
-        </li>
-        <li class="option">
-          <i class="bx bxl-facebook-circle" style="color: #4267b2"></i>
-          <span class="option-text">Tour 4</span>
-        </li>
-        <li class="option">
-          <i class="bx bxl-twitter" style="color: #1da1f2"></i>
-          <span class="option-text">Tour 5</span>
-        </li>
-      </ul>
+      <p>test</p>
     </div>
+    <!-- End of BodyInformation -->
 
     <script src="tourMenu.js"></script>
   </body>
