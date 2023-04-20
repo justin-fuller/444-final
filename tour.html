@@ -20,11 +20,6 @@
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
       }
-
-      body {
-        background: #e3f2fd;
-      }
-
       .select-menu {
         max-width: 330px;
         /* margin: 50px auto; */
@@ -125,7 +120,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="header">
+    <!-- <header class="header">
       <a href="index.html"
         ><img class="winonaHeaderLogo" src="whiteWinonaLogo.png"
       /></a>
@@ -137,12 +132,35 @@
         <li><a href="tour.html">Take a Tour!</a></li>
         <li><a href="treeFinder.html">Tree Finder</a></li>
       </ul>
+    </header> -->
+
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#"><img src="whiteWinonaLogo.png" alt="DevBabu.com" /></a>
+        </div>
+        <div class="arboretumText"><p>WSU Arboretum</p></div>
+        <div class="navbar">
+          <div class="close-nav"><button>×</button></div>
+          <nav>
+            <ul>
+              <li><a href="tour.html">Take a Tour!</a></li>
+              <li><a href="treeFinder.html">Tree Finder</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-bar">
+          <button><i></i></button>
+        </div>
+      </div>
     </header>
     <!-- End of Navbar -->
 
     <!-- BodyInformation -->
-    <div class="bodyInformation">
+    <!-- <div class="bodyInformation"> -->
+    <div class="container">
       <h1>Welcome to the Tour Page!</h1>
+      <br />
       <h3>Choose a tour:</h3>
       <!-- <button onClick="loadXMLDoc()">asdf</button>
       <p id="newHTML"></p> -->
@@ -174,12 +192,22 @@
         </ul>
       </div>
       <!-- End of Dropdown Menu -->
-
-      <p>test</p>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+        distinctio aut omnis. Ipsum eveniet dignissimos minima, accusantium modi
+        quasi nesciunt eum eos nobis sunt aspernatur iure sequi aut? Tenetur
+        quidem eligendi consequatur aliquam, tempore atque nisi veniam hic
+        facere, expedita nobis, nemo adipisci! Optio accusantium sequi ratione
+        reprehenderit molestias porro! Eligendi saepe magnam iusto ab quaerat
+        alias placeat optio necessitatibus corrupti facere, perspiciatis vitae a
+        consectetur dolores laudantium quibusdam quis.
+      </p>
     </div>
     <!-- End of BodyInformation -->
 
     <!-- Importing the JavaScript file for the Dropdown Tour menu -->
     <script src="tourMenu.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>
