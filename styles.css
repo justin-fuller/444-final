@@ -116,11 +116,12 @@ header .logo img {
   display: block;
 }
 
-.arboretumText {
+.arboretumText p {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
+
 .navbar {
   position: fixed;
   top: 0;
