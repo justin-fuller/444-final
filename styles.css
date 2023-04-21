@@ -55,20 +55,10 @@ p {
   color: var(--black);
   line-height: 1.5;
 }
-/* End of Global CSS Variables */
+/* End of Global CSS Variables and Global CSS Styling*/
 
 * {
   margin: 0;
-}
-
-.bodyInformation {
-  padding: 5px;
-  margin-top: 0px;
-  background-color: white;
-  font-family: Arial;
-  border: 1px solid;
-  width: 100%;
-  padding: 10px;
 }
 
 body {
@@ -77,6 +67,7 @@ body {
 }
 
 /* Navigation Bar CSS */
+/* Importing Sans Serif font for X button */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 *,
 *::before,
@@ -91,12 +82,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #f7f7f7;
-} */
-
 header {
   background-color: #3c0680;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -104,7 +89,7 @@ header {
   padding: 10px 20px;
 }
 header .wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
