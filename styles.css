@@ -198,9 +198,37 @@ header .logo img {
   padding: 30px;
 }
 
-.map{
+/*.map{
   display: flex;
   justify-content: center;
+}
+*/
+.map{
+
+  overflow:hidden;
+
+  padding-bottom:56.25%;
+
+  position:relative;
+
+  height:0;
+
+}
+
+.map iframe{
+
+  left: 50px;
+
+  right: 40px;
+
+  top:0;
+
+  height:60%;
+
+  width:90%;
+
+  position:absolute;
+
 }
 
 
