@@ -32,3 +32,33 @@ function myFunction(xml) {
     document.getElementById("MMagnoliaImage").style.display = "block";
   }
 }
+
+
+//currently gets lat and long as a string, will need to parse
+
+function loadXMLDoc2() {
+  //Code to do XML HTTP request (see slides) goes here
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      // Run a function to handle XML data recv’d
+      getLatLong(this);
+    }
+  };
+  xhttp.open("GET", "trees.xml", true);
+  xhttp.send();
+}
+function getLatLong(xml){
+  var m, i, xmlDoc, stringLog;
+  xmlDoc = xml.responseXML;
+  stringLog = ""
+  m = xmlDoc.getElementsByTagName("ThemeEntityAbridgedData");
+  var div = document.createElement("div");
+
+  console.log(m);
+  for (var i =0; i <m.length; i++){
+
+    stringLog += m[i].childNodes[3].innerHTML + "</br>";
+  } 
+   document.getElementById("newLoc").innerHTML = stringLog;
+}
