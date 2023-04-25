@@ -198,6 +198,12 @@ header .logo img {
   padding: 30px;
 }
 
+.map{
+  display: flex;
+  justify-content: center;
+}
+
+
 @media (min-width: 800px) {
   .navbar {
     all: unset;
