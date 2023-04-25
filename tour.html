@@ -115,7 +115,21 @@
           opacity: 0;
         }
       }
+      /* Dropdown Button */
+
       /* End Stlye for Tour Dropdown Menu */
+
+      /* .loadTourButton {
+      }
+      .loadTourButton:hover {
+        cursor: pointer;
+      } */
+
+      #cars {
+        padding: 10px;
+        width: 200px;
+        /* text-align: center; */
+      }
     </style>
   </head>
   <body>
@@ -147,11 +161,30 @@
       <h1>Welcome to the Tour Page!</h1>
       <br />
       <h3>Choose a tour:</h3>
-      <!-- <button onClick="loadXMLDoc()">asdf</button>
-      <p id="newHTML"></p> -->
 
       <!-- Dropdown Menu -->
-      <div class="select-menu">
+      <!-- <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Tree Tour</a>
+          <a href="#">Legume Family</a>
+          <a href="#">Grass Family</a>
+          <a href="#">Edible</a>
+          <a href="#">Medicinal</a>
+          <a href="#">Shakespear Tree Tour</a>
+          <a href="#">Butterflies</a>
+          <a href="#">Birds</a>
+          <a href="#">Flowering Trees of WSU</a>
+          <a href="#">Cultivar Garden</a>
+          <a href="#">Bioswale #3</a>
+          <a href="#">Bioswale #1 and #2</a>
+          <a href="#">Bioswale #4</a>
+          <a href="#">Bioswale #5</a>
+          <a href="#">Younger Courtyard</a>
+        </div>
+      </div> -->
+
+      <!-- <div class="select-menu">
         <div class="select-btn">
           <span class="sBtn-text">Select your Tour</span>
           <i class="bx bx-chevron-down"></i>
@@ -160,22 +193,78 @@
         <ul class="options">
           <li class="option">
             <i class="bx bxs-tree" style="color: #139d1c"></i>
-            <span class="option-text">Tour 1</span>
+            <span class="option-text">Tree Tour</span>
           </li>
           <li class="option">
             <i class="bx bxs-tree" style="color: #3c0680"></i>
-            <span class="option-text">Tour 2</span>
+            <span class="option-text">Legume Family</span>
           </li>
           <li class="option">
             <i class="bx bxs-tree" style="color: #4b08a1"></i>
-            <span class="option-text">Tour 3</span>
+            <span class="option-text">Grass Family</span>
           </li>
           <li class="option">
             <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Tour 4</span>
+            <span class="option-text">Edible</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Medicinal</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Shakespeare Tree Tour</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Butterflies</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Birds</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Flowering Trees of WSU</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Cultivar Garden</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Bioswale #3</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Bioswale #1 & #2</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Bioswale #4</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Bioswale #5</span>
+          </li>
+          <li class="option">
+            <i class="bx bxs-tree" style="color: #09650f"></i>
+            <span class="option-text">Younger Courtyard</span>
           </li>
         </ul>
-      </div>
+      </div> -->
+
+      <select id="cars">
+        <option value="volvo" selected>Tour 1</option>
+        <option value="saab">Tour 2</option>
+        <option value="vw">Tour 3</option>
+        <option value="audi">Tour 4</option>
+      </select>
+
+      <br />
+      <br />
+      <button class="loadTourButton">Load Tour</button>
+      <br />
       <!-- End of Dropdown Menu -->
       <br />
       <p>

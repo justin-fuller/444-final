@@ -203,34 +203,29 @@ header .logo img {
   justify-content: center;
 }
 */
-.map{
+.map {
+  overflow: hidden;
 
-  overflow:hidden;
+  padding-bottom: 56.25%;
 
-  padding-bottom:56.25%;
+  position: relative;
 
-  position:relative;
-
-  height:0;
-
+  height: 0;
 }
 
-.map iframe{
-
+.map iframe {
   left: 50px;
 
   right: 40px;
 
-  top:0;
+  top: 0;
 
-  height:60%;
+  height: 60%;
 
-  width:90%;
+  width: 90%;
 
-  position:absolute;
-
+  position: absolute;
 }
-
 
 @media (min-width: 800px) {
   .navbar {
