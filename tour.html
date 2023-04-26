@@ -13,7 +13,10 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <title>Take A Tour!</title>
     <!-- Style for the Tour Dropdown Menu -->
     <style>
@@ -23,20 +26,21 @@
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
       }
-      ::selection{
+      ::selection {
         color: #fff;
         background: #4285f4;
       }
-      .wrapper{
+      .wrapper {
         width: 370px;
         margin-top: 10px;
       }
-      .select-btn, li{
+      .select-btn,
+      li {
         display: flex;
         align-items: center;
         cursor: pointer;
       }
-      .select-btn{
+      .select-btn {
         height: 55px;
         padding: 0 20px;
         font-size: 22px;
@@ -45,31 +49,31 @@
         border: 1px solid black;
         border-radius: 7px;
         justify-content: space-between;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       }
-      .select-btn i{
+      .select-btn i {
         font-size: 31px;
         /* margin-top: 3px; */
         transition: transform 0.2s linear;
       }
-      .wrapper.active .select-btn i{
+      .wrapper.active .select-btn i {
         transform: rotate(-180deg);
       }
-      .content{
+      .content {
         display: none;
         padding: 20px;
         margin-top: 15px;
         background: #fff;
         border-radius: 7px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       }
-      .wrapper.active .content{
+      .wrapper.active .content {
         display: block;
       }
-      .content .search{
+      .content .search {
         position: relative;
       }
-      .search i{
+      .search i {
         top: 50%;
         left: 15px;
         color: #999;
@@ -78,55 +82,70 @@
         transform: translateY(-50%);
         position: absolute;
       }
-      .search input{
+      .search input {
         height: 50px;
         width: 100%;
         outline: none;
         font-size: 17px;
         border-radius: 5px;
         padding: 0 20px 0 43px;
-        border: 1px solid #B3B3B3;
+        border: 1px solid #b3b3b3;
       }
-      .search input:focus{
+      .search input:focus {
         padding-left: 42px;
         border: 2px solid #4285f4;
       }
-      .search input::placeholder{
+      .search input::placeholder {
         color: #bfbfbf;
       }
-      .content .options{
+      .content .options {
         margin-top: 10px;
         max-height: 250px;
         overflow-y: auto;
         padding-right: 7px;
         color: #3c0680;
       }
-      .options::-webkit-scrollbar{
+      .options::-webkit-scrollbar {
         width: 7px;
       }
-      .options::-webkit-scrollbar-track{
+      .options::-webkit-scrollbar-track {
         background: #f1f1f1;
         border-radius: 25px;
       }
-      .options::-webkit-scrollbar-thumb{
+      .options::-webkit-scrollbar-thumb {
         background: #ccc;
         border-radius: 25px;
       }
-      .options::-webkit-scrollbar-thumb:hover{
+      .options::-webkit-scrollbar-thumb:hover {
         background: #b3b3b3;
       }
-      .options li{
+      .options li {
         height: 50px;
         padding: 0 13px;
         font-size: 21px;
       }
-      .options li:hover, li.selected{
+      .options li:hover,
+      li.selected {
         border-radius: 5px;
         background: #f2f2f2;
       }
       span {
         font-weight: 500;
-        color: #3c0680
+        color: #3c0680;
+      }
+
+      .loadTourButton {
+        color: white;
+        background-color: #4b08a1;
+        border-radius: 5px;
+        height: 50px;
+        width: 150px;
+        font-size: 18px;
+      }
+
+      .loadTourButton:hover {
+        background-color: #3c0680;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -160,7 +179,7 @@
       <br />
       <h3>Choose a tour:</h3>
 
-      <!-- Dropdown Menu --> 
+      <!-- Dropdown Menu -->
       <div class="wrapper">
         <div class="select-btn">
           <span>Select Tour</span>
@@ -169,19 +188,21 @@
         <div class="content">
           <div class="search">
             <i class="uil uil-search"></i>
-            <input spellcheck="false" type="text" placeholder="Search">
+            <input spellcheck="false" type="text" placeholder="Search" />
           </div>
           <ul class="options"></ul>
         </div>
       </div>
       <!-- End of Dropdown Menu -->
+      <br />
+      <div id="loadButtonDiv">
+        <!-- <a href="treeFinder.html"
+          ><button class="loadTourButton">Load Tour</button></a
+        > -->
+      </div>
 
-      <br />
-      <br />
-      <button class="loadTourButton">Load Tour</button>
-      <br />
+      <br /><br />
 
-      <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
         distinctio aut omnis. Ipsum eveniet dignissimos minima, accusantium modi
@@ -217,8 +238,6 @@
       </p>
     </div>
     <!-- End of Body Information Container -->
-
-
 
     <!-- Importing the JavaScript file for the Dropdown Tour menu -->
     <script src="tourMenu.js"></script>
