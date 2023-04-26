@@ -1,20 +1,69 @@
-//Multiple options dropdown
-//https://codepen.io/gatoledo1/pen/QWmpWjK
+const wrapper = document.querySelector(".wrapper"),
+  selectBtn = wrapper.querySelector(".select-btn"),
+  searchInp = wrapper.querySelector("input"),
+  options = wrapper.querySelector(".options");
 
-const optionMenu = document.querySelector(".select-menu"),
-  selectBtn = optionMenu.querySelector(".select-btn"),
-  options = optionMenu.querySelectorAll(".option"),
-  sBtn_text = optionMenu.querySelector(".sBtn-text");
+const loadTourDiv = document.getElementById("loadButtonDiv");
 
-selectBtn.addEventListener("click", () =>
-  optionMenu.classList.toggle("active")
-);
+let countries = [
+  "Tree Tour",
+  "Legume Family",
+  "Grass Family",
+  "Edible",
+  "Medicinal",
+  "Shakespeare Tree Tour",
+  "Butterflies",
+  "Birds",
+  "Flowering Trees of WSU",
+  "Cultivar Garden",
+  "Bioswale #3",
+  "Bioswale #1 & #2",
+  "Bioswale #4",
+  "Bioswale #5",
+  "Younger Courtyard",
+  "Kai Selection",
+];
 
-options.forEach((option) => {
-  option.addEventListener("click", () => {
-    let selectedOption = option.querySelector(".option-text").innerText;
-    sBtn_text.innerText = selectedOption;
-
-    optionMenu.classList.remove("active");
+function addCountry(selectedCountry) {
+  options.innerHTML = "";
+  countries.forEach((country) => {
+    let isSelected = country == selectedCountry ? "selected" : "";
+    let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
+    options.insertAdjacentHTML("beforeend", li);
   });
+}
+addCountry();
+
+function updateName(selectedLi) {
+  searchInp.value = "";
+  addCountry(selectedLi.innerText);
+  wrapper.classList.remove("active");
+  selectBtn.firstElementChild.innerText = selectedLi.innerText;
+  let test = `
+  <div id='loadButtonDiv'>
+    <a href="treeFinder.html">
+    <button class="loadTourButton">Load Tour</button>
+    </a>
+  </div>`;
+  loadTourDiv.innerHTML = test;
+}
+
+searchInp.addEventListener("keyup", () => {
+  let arr = [];
+  let searchWord = searchInp.value.toLowerCase();
+  arr = countries
+    .filter((data) => {
+      return data.toLowerCase().startsWith(searchWord);
+    })
+    .map((data) => {
+      let isSelected =
+        data == selectBtn.firstElementChild.innerText ? "selected" : "";
+      return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
+    })
+    .join("");
+  options.innerHTML = arr
+    ? arr
+    : `<p style="margin-top: 10px;">Oops! Tree tour not found</p>`;
 });
+
+selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
