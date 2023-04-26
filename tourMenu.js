@@ -41,7 +41,7 @@ function updateName(selectedLi) {
   selectBtn.firstElementChild.innerText = selectedLi.innerText;
   let test = `
   <div id='loadButtonDiv'>
-    <a href="treeFinder.html"h>
+    <a href="treeFinder.html">
     <button class="loadTourButton">Load Tour</button>
     </a>
   </div>`;
