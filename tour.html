@@ -12,6 +12,8 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Take A Tour!</title>
     <!-- Style for the Tour Dropdown Menu -->
     <style>
@@ -21,121 +23,117 @@
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
       }
-      .select-menu {
-        max-width: 330px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      ::selection{
+        color: #fff;
+        background: #4285f4;
       }
-      .select-menu .select-btn {
-        display: flex;
-        height: 55px;
-        background: #fff;
-        padding: 20px;
-        font-size: 18px;
-        font-weight: 400;
-        border-radius: 8px;
-        align-items: center;
-        cursor: pointer;
-        justify-content: space-between;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      }
-      .select-menu .options {
-        position: absolute;
-        width: 330px;
-        overflow-y: auto;
-        max-height: 295px;
-        padding: 10px;
+      .wrapper{
+        width: 370px;
         margin-top: 10px;
-        border-radius: 8px;
-        background: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        animation-name: fadeInDown;
-        -webkit-animation-name: fadeInDown;
-        animation-duration: 0.35s;
-        animation-fill-mode: both;
-        -webkit-animation-duration: 0.35s;
-        -webkit-animation-fill-mode: both;
       }
-      .select-menu .options .option {
+      .select-btn, li{
         display: flex;
-        height: 55px;
-        cursor: pointer;
-        padding: 0 16px;
-        border-radius: 8px;
         align-items: center;
+        cursor: pointer;
+      }
+      .select-btn{
+        height: 55px;
+        padding: 0 20px;
+        font-size: 22px;
+        /* background: #fff; */
         background: #fff;
+        border: 1px solid black;
+        border-radius: 7px;
+        justify-content: space-between;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       }
-      .select-menu .options .option:hover {
-        background: #f2f2f2;
+      .select-btn i{
+        font-size: 31px;
+        /* margin-top: 3px; */
+        transition: transform 0.2s linear;
       }
-      .select-menu .options .option i {
-        font-size: 25px;
-        margin-right: 12px;
-      }
-      .select-menu .options .option .option-text {
-        font-size: 18px;
-        color: #333;
-      }
-
-      .select-btn i {
-        font-size: 25px;
-        transition: 0.3s;
-      }
-
-      .select-menu.active .select-btn i {
+      .wrapper.active .select-btn i{
         transform: rotate(-180deg);
       }
-      .select-menu.active .options {
+      .content{
+        display: none;
+        padding: 20px;
+        margin-top: 15px;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      .wrapper.active .content{
         display: block;
-        opacity: 0;
-        z-index: 10;
-        animation-name: fadeInUp;
-        -webkit-animation-name: fadeInUp;
-        animation-duration: 0.4s;
-        animation-fill-mode: both;
-        -webkit-animation-duration: 0.4s;
-        -webkit-animation-fill-mode: both;
       }
-
-      @keyframes fadeInUp {
-        from {
-          transform: translate3d(0, 30px, 0);
-        }
-        to {
-          transform: translate3d(0, 0, 0);
-          opacity: 1;
-        }
+      .content .search{
+        position: relative;
       }
-      @keyframes fadeInDown {
-        from {
-          transform: translate3d(0, 0, 0);
-          opacity: 1;
-        }
-        to {
-          transform: translate3d(0, 20px, 0);
-          opacity: 0;
-        }
+      .search i{
+        top: 50%;
+        left: 15px;
+        color: #999;
+        font-size: 20px;
+        pointer-events: none;
+        transform: translateY(-50%);
+        position: absolute;
       }
-      /* Dropdown Button */
-
-      /* End Stlye for Tour Dropdown Menu */
-
-      /* .loadTourButton {
+      .search input{
+        height: 50px;
+        width: 100%;
+        outline: none;
+        font-size: 17px;
+        border-radius: 5px;
+        padding: 0 20px 0 43px;
+        border: 1px solid #B3B3B3;
       }
-      .loadTourButton:hover {
-        cursor: pointer;
-      } */
-
-      #cars {
-        padding: 10px;
-        width: 200px;
-        /* text-align: center; */
+      .search input:focus{
+        padding-left: 42px;
+        border: 2px solid #4285f4;
+      }
+      .search input::placeholder{
+        color: #bfbfbf;
+      }
+      .content .options{
+        margin-top: 10px;
+        max-height: 250px;
+        overflow-y: auto;
+        padding-right: 7px;
+        color: #3c0680;
+      }
+      .options::-webkit-scrollbar{
+        width: 7px;
+      }
+      .options::-webkit-scrollbar-track{
+        background: #f1f1f1;
+        border-radius: 25px;
+      }
+      .options::-webkit-scrollbar-thumb{
+        background: #ccc;
+        border-radius: 25px;
+      }
+      .options::-webkit-scrollbar-thumb:hover{
+        background: #b3b3b3;
+      }
+      .options li{
+        height: 50px;
+        padding: 0 13px;
+        font-size: 21px;
+      }
+      .options li:hover, li.selected{
+        border-radius: 5px;
+        background: #f2f2f2;
+      }
+      span {
+        font-weight: 500;
+        color: #3c0680
       }
     </style>
   </head>
   <body>
     <!-- Navbar -->
     <header>
-      <div class="wrapper">
+      <div class="wrapper2">
         <div class="logo">
           <a href="tour.html"><img src="whiteWinonaLogo.png" /></a>
         </div>
@@ -162,110 +160,27 @@
       <br />
       <h3>Choose a tour:</h3>
 
-      <!-- Dropdown Menu -->
-      <!-- <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#">Tree Tour</a>
-          <a href="#">Legume Family</a>
-          <a href="#">Grass Family</a>
-          <a href="#">Edible</a>
-          <a href="#">Medicinal</a>
-          <a href="#">Shakespear Tree Tour</a>
-          <a href="#">Butterflies</a>
-          <a href="#">Birds</a>
-          <a href="#">Flowering Trees of WSU</a>
-          <a href="#">Cultivar Garden</a>
-          <a href="#">Bioswale #3</a>
-          <a href="#">Bioswale #1 and #2</a>
-          <a href="#">Bioswale #4</a>
-          <a href="#">Bioswale #5</a>
-          <a href="#">Younger Courtyard</a>
-        </div>
-      </div> -->
-
-      <!-- <div class="select-menu">
+      <!-- Dropdown Menu --> 
+      <div class="wrapper">
         <div class="select-btn">
-          <span class="sBtn-text">Select your Tour</span>
-          <i class="bx bx-chevron-down"></i>
+          <span>Select Tour</span>
+          <i class="uil uil-angle-down"></i>
         </div>
-
-        <ul class="options">
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #139d1c"></i>
-            <span class="option-text">Tree Tour</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #3c0680"></i>
-            <span class="option-text">Legume Family</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #4b08a1"></i>
-            <span class="option-text">Grass Family</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Edible</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Medicinal</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Shakespeare Tree Tour</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Butterflies</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Birds</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Flowering Trees of WSU</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Cultivar Garden</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Bioswale #3</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Bioswale #1 & #2</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Bioswale #4</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Bioswale #5</span>
-          </li>
-          <li class="option">
-            <i class="bx bxs-tree" style="color: #09650f"></i>
-            <span class="option-text">Younger Courtyard</span>
-          </li>
-        </ul>
-      </div> -->
-
-      <select id="cars">
-        <option value="volvo" selected>Tour 1</option>
-        <option value="saab">Tour 2</option>
-        <option value="vw">Tour 3</option>
-        <option value="audi">Tour 4</option>
-      </select>
+        <div class="content">
+          <div class="search">
+            <i class="uil uil-search"></i>
+            <input spellcheck="false" type="text" placeholder="Search">
+          </div>
+          <ul class="options"></ul>
+        </div>
+      </div>
+      <!-- End of Dropdown Menu -->
 
       <br />
       <br />
       <button class="loadTourButton">Load Tour</button>
       <br />
-      <!-- End of Dropdown Menu -->
+
       <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
@@ -302,6 +217,8 @@
       </p>
     </div>
     <!-- End of Body Information Container -->
+
+
 
     <!-- Importing the JavaScript file for the Dropdown Tour menu -->
     <script src="tourMenu.js"></script>

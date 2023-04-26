@@ -68,13 +68,13 @@ body {
 
 /* Navigation Bar CSS */
 /* Importing Sans Serif font for X button */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   line-height: 1.5em;
-}
+} */
 
 html {
   font-size: 16px;
@@ -88,7 +88,7 @@ header {
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
 }
-header .wrapper {
+header .wrapper2 {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
