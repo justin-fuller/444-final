@@ -62,3 +62,34 @@ function getLatLong(xml){
   } 
    document.getElementById("newLoc").innerHTML = stringLog;
 }
+
+function stripLatLong(xml){
+  var m, i, xmlDoc, stringLog;
+  xmlDoc = xml.responseXML;
+  stringLog = ""
+  m = xmlDoc.getElementsByTagName("ThemeEntityAbridgedData");
+  var div = document.createElement("div");
+
+  console.log(m);
+  for (var i =0; i <m.length; i++){
+
+    stringLog += m[i].childNodes[3] + "</br>";
+  } 
+   document.getElementById("newLoc") = stringLog;
+}
+
+/*
+ *function to test map point plotting
+ */
+function myMarker(){
+
+  const myLatLng =  {lat: 44.047318 ,lng:  -91.644497};
+
+  var marker = new google.map.Marker(
+    {
+      position: myLatLng,
+      map, 
+      title: "Sample Tree",
+    });
+    marker.setMap(map)
+}
