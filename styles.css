@@ -227,6 +227,37 @@ header .logo img {
   position: absolute;
 }
 
+.hide{
+  display:none;
+}
+
+.show{
+  display:block;
+}
+
+.img-emblem{
+  width: 200px;
+  height: 200px;
+  background-size:100%;
+}
+
+.img-emblem:hover{
+  width: 215px;
+  height:215px;
+  background-color: var(--grey);
+  cursor: pointer;
+}
+
+.center{
+  margin-left:100px;
+}
+
+.tab{
+  margin-left: 100px;
+}
+
+
+
 @media (min-width: 800px) {
   .navbar {
     all: unset;
