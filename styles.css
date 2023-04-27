@@ -210,29 +210,6 @@ header .logo img {
   justify-content: center;
 }
 */
-.map {
-  overflow: hidden;
-
-  padding-bottom: 56.25%;
-
-  position: relative;
-
-  height: 0;
-}
-
-.map iframe {
-  left: 50px;
-
-  right: 40px;
-
-  top: 0;
-
-  height: 60%;
-
-  width: 90%;
-
-  position: absolute;
-}
 
 .hide {
   display: none;
@@ -263,6 +240,19 @@ header .logo img {
   margin-left: 100px;
 }
 
+#map {
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+#map iframe {
+  display: block;
+  margin: 0 auto;
+  top: 0;
+  height: 400px;
+  width: 90%;
+}
+
 @media (min-width: 800px) {
   .navbar {
     all: unset;
@@ -280,4 +270,5 @@ header .logo img {
     display: none;
   }
 }
+
 /* End of Navigation Bar Menu */
