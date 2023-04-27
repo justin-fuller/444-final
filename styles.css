@@ -76,6 +76,13 @@ body {
   line-height: 1.5em;
 } */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -227,36 +234,34 @@ header .logo img {
   position: absolute;
 }
 
-.hide{
-  display:none;
+.hide {
+  display: none;
 }
 
-.show{
-  display:block;
+.show {
+  display: block;
 }
 
-.img-emblem{
+.img-emblem {
   width: 200px;
   height: 200px;
-  background-size:100%;
+  background-size: 100%;
 }
 
-.img-emblem:hover{
+.img-emblem:hover {
   width: 215px;
-  height:215px;
+  height: 215px;
   background-color: var(--grey);
   cursor: pointer;
 }
 
-.center{
-  margin-left:100px;
-}
-
-.tab{
+.center {
   margin-left: 100px;
 }
 
-
+.tab {
+  margin-left: 100px;
+}
 
 @media (min-width: 800px) {
   .navbar {
