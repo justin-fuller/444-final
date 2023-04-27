@@ -59,6 +59,9 @@ p {
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -67,21 +70,6 @@ body {
 }
 
 /* Navigation Bar CSS */
-/* Importing Sans Serif font for X button */
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  line-height: 1.5em;
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 html {
   font-size: 16px;
@@ -203,64 +191,20 @@ header .logo img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px;
-}
-
-/*.map{
-  display: flex;
-  justify-content: center;
-}
-*/
-.map {
   overflow: hidden;
+}
 
+#map {
   padding-bottom: 56.25%;
-
   position: relative;
-
-  height: 0;
 }
 
-.map iframe {
-  left: 50px;
-
-  right: 40px;
-
-  top: 0;
-
-  height: 60%;
-
-  width: 90%;
-
-  position: absolute;
-}
-
-.hide {
-  display: none;
-}
-
-.show {
+#map iframe {
   display: block;
-}
-
-.img-emblem {
-  width: 200px;
-  height: 200px;
-  background-size: 100%;
-}
-
-.img-emblem:hover {
-  width: 215px;
-  height: 215px;
-  background-color: var(--grey);
-  cursor: pointer;
-}
-
-.center {
-  margin-left: 100px;
-}
-
-.tab {
-  margin-left: 100px;
+  margin: 0 auto;
+  top: 0;
+  height: 400px;
+  width: 90%;
 }
 
 @media (min-width: 800px) {
@@ -280,4 +224,3 @@ header .logo img {
     display: none;
   }
 }
-/* End of Navigation Bar Menu */
