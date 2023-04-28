@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- Importing Poppins Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/uck5riv.css" />
+    <title>Emblems</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="wrapper2">
+        <div class="logo">
+          <a href="tour.html"><img src="whiteWinonaLogo.png" /></a>
+        </div>
+        <div class="arboretumText"><p>WSU Arboretum</p></div>
+        <div class="navbar">
+          <div class="close-nav"><button>×</button></div>
+          <nav>
+            <ul>
+              <li><a href="tour.html">Take a Tour!</a></li>
+              <li><a href="treeFinder.html">Tree Finder</a></li>
+              <li><a href="rank.html">Emblems</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-bar">
+          <button><i></i></button>
+        </div>
+      </div>
+    </header>
+    <!-- End of Navbar -->
+
+    <!-- BodyInformation -->
+    <div class="container">
+      <h1>Emblems</h1>
+      <div id="images" class="center">
+        <img
+          id="seedling"
+          class="img-emblem"
+          src="img/tree-seedling.png"
+          alt=""
+        />
+        <img
+          id="sprout"
+          class="img-emblem"
+          src="img/tree-logo - sprout.png"
+          alt=""
+        />
+        <img
+          id="sapling"
+          class="img-emblem"
+          src="img/tree-logo-sapling.png"
+          alt=""
+        />
+        <img id="tree" class="img-emblem" src="img/tree-logo-tree.png" alt="" />
+        <img
+          id="elder"
+          class="img-emblem"
+          src="img/tree-logo-elder.png"
+          alt=""
+        />
+      </div>
+
+      <div id="text-seed" class="hide">
+        <h2 id="text-seed" class="tab">Seedling - Starting Rank</h2>
+        <p id="text-seed" class="tab">
+          Congrats on starting out, you have a long way to go to climb up the
+          ranks, but I'm sure you will be able to do it! To start earning points
+          for the next rank up, start by taking a tours, the threshold for
+          sprout rank is easily obtainable. I hope you enjoy many of the tours
+          we have avalible!
+        </p>
+      </div>
+
+      <div id="text-sprout" class="hide">
+        <h2 id="text-sprout" class="tab">Sprout - Threshold: 2,000 points</h2>
+        <p id="text-sprout" class="tab">
+          Sprouts are just the 2nd stage of growing into a tree's life cylce,
+          keep it up and get too sapling rank!
+        </p>
+        <p id="text-sprout" class="tab">Reward: Free WSU Landyard!</p>
+      </div>
+
+      <div id="text-sap" class="hide">
+        <h2 id="text-sap" class="tab">Sapling Rank- Threshold: 4,500 points</h2>
+        <p id="text-sap" class="tab">
+          Saplings are the 3rd stage of growing into a tree, we wish you the
+          best on ranking up!
+        </p>
+        <p id="text-sap" class="tab">Reward: Free WSU Coffee Mugg!</p>
+      </div>
+
+      <div id="text-tree" class="hide">
+        <h2 id="text-tree" class="tab">Tree Rank - Threshold: 6,000 points</h2>
+        <p id="text-tree" class="tab">
+          Congrats on Tree rank, but here is the true testimate of your
+          dedication, can you get to Elder Rank?
+        </p>
+        <p id="text-tree" class="tab">Rewards: 5 Free Meal Swipes at Zanes!</p>
+      </div>
+
+      <div id="text-elder" class="hide">
+        <h2 id="text-elder" class="tab">
+          Elder Rank - Threshold: 10,000 points
+        </h2>
+        <p id="text-elder" class="tab">WOW YOU DID IT!</p>
+        <p id="text-elder" class="tab">
+          Rewards: +1 credit & plant a tree of your choice!
+        </p>
+      </div>
+    </div>
+
+    <!-- End of BodyInformation -->
+    <script src="tourMenu.js"></script>
+    <script src="navbar.js"></script>
+
+    <script>
+      //seedling
+      $(document).ready(function () {
+        $("#seedling").click(function () {
+          $("#text-seed").toggle("show");
+        });
+      });
+      //sprout
+      $(document).ready(function () {
+        $("#sprout").click(function () {
+          $("#text-sprout").toggle("show");
+        });
+      });
+      //sapling
+      $(document).ready(function () {
+        $("#sapling").click(function () {
+          $("#text-sap").toggle("show");
+        });
+      });
+      //tree
+      $(document).ready(function () {
+        $("#tree").click(function () {
+          $("#text-tree").toggle("show");
+        });
+      });
+      //elder
+      $(document).ready(function () {
+        $("#elder").click(function () {
+          $("#text-elder").toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>
